@@ -1,4 +1,11 @@
 import type {Database,SqlJsStatic,SqlValue} from 'sql.js';
+import type {Worksheet,Cell,Font} from 'exceljs';
+export function styleDataWorksheet(sheet:Worksheet,fontFamily:string){
+ const cells:{cell:Cell;font:Partial<Font>}[]=[];
+ sheet.eachRow(row=>row.eachCell({includeEmpty:true},cell=>cells.push({cell,font:{...cell.font}})));
+ sheet.columns.forEach(column=>{column.font={...column.font,name:fontFamily};});
+ cells.forEach(({cell,font})=>{cell.font={...font,name:fontFamily};});
+}
 export type DataColumn={name:string;type:string;pk:number;notnull:number;dflt_value:SqlValue};
 export type DataTable={name:string;type:string;sql:string};
 export type DataView={tables:DataTable[];table:string;columns:DataColumn[];rows:Record<string,SqlValue>[];keys:Record<string,SqlValue>[];count:number;relations:Record<string,SqlValue>[];query?:{columns:string[];values:SqlValue[][];truncated:boolean}[]};
