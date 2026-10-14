@@ -1,7 +1,9 @@
 {
   "product": "data",
-  "name": "Prisma Data",
-  "website": "https://oscard0823.github.io/prisma-data/",
-  "sourceRepository": "OscarD0823/prisma-pdf",
+  "name": "Asteoria Nexus",
+  "channel": "beta",
+  "website": "https://oscard0823.github.io/asteoria-nexus/",
+  "sourceRepository": "OscarD0823/asteoria-nexus",
+  "sharedRepository": "OscarD0823/asteoria",
   "sourceRef": "main"
 }

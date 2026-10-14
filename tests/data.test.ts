@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import initSqlJs from 'sql.js';import {DataDatabase} from '@prisma/data/data-core';
-test('Prisma Data preserves SQL relations, rejects invalid keys and rolls back failed batches',async()=>{
+test("Asteoria Nexus preserves SQL relations, rejects invalid keys and rolls back failed batches",async()=>{
  const SQL=await initSqlJs(),database=new DataDatabase(SQL);
  database.sql('CREATE TABLE equipo(id INTEGER PRIMARY KEY,nombre TEXT); CREATE TABLE tarea(id INTEGER PRIMARY KEY,equipo_id INTEGER REFERENCES equipo(id),valor REAL); INSERT INTO equipo VALUES(1,\'Prisma\');');
  database.insert('tarea',{id:1,equipo_id:1,valor:12.5});assert.throws(()=>database.insert('tarea',{id:2,equipo_id:99}),/FOREIGN KEY/);

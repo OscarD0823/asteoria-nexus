@@ -1,13 +1,13 @@
 {
-  "name": "@prisma/data",
-  "version": "0.3.1",
+  "name": "@asteoria/nexus",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "license": "AGPL-3.0-or-later",
+  "author": "OscarD0823",
   "scripts": {
     "dev": "node tools/workspace.mjs dev",
-    "build": "node tools/workspace.mjs build",
     "test": "node tools/workspace.mjs test",
-    "publish:pages": "node tools/workspace.mjs publish"
+    "build": "node tools/workspace.mjs build"
   }
 }
