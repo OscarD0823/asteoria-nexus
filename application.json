@@ -1,9 +1,9 @@
 {
   "product": "data",
-  "name": "Asteoria Nexus",
+  "name": "Auralis Nexus",
   "channel": "beta",
-  "website": "https://oscard0823.github.io/asteoria-nexus/",
-  "sourceRepository": "OscarD0823/asteoria-nexus",
+  "website": "https://oscard0823.github.io/auralis-nexus/",
+  "sourceRepository": "OscarD0823/auralis-nexus",
   "sharedRepository": "OscarD0823/asteoria",
   "sourceRef": "main"
 }
